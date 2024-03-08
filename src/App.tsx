@@ -1,6 +1,9 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import collegeBasketballData from "./CollegeBasketballTeams.json";
+
+const basketballData = collegeBasketballData.teams;
 
 function App() {
   return (
