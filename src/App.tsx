@@ -1,7 +1,16 @@
+/**
+ * Donna Kim
+ * Section 03
+ * Description: This React project takes JSON data about NCAA basketball teams and displays
+ * their information.
+ */
 import React from 'react';
 import './App.css';
 import collegeBasketballData from './CollegeBasketballTeams.json';
 
+/**
+ * Props that layouts data information for component
+ */
 interface TeamProps {
   tid: number;
   cid: number;
@@ -16,8 +25,14 @@ interface TeamProps {
   longitude: number;
 }
 
+/**
+ * save json data to make accessible
+ */
 const basketballData = collegeBasketballData.teams;
 
+/**
+ * Function that holds introduction to the site use.
+ */
 function SiteIntro() {
   return (
     <div>
@@ -32,6 +47,9 @@ function SiteIntro() {
   );
 }
 
+/**
+ * Component to create cards for the information about each team we want to display
+ */
 class Team extends React.Component<TeamProps> {
   render() {
     const oneTeam = this.props;
@@ -48,6 +66,9 @@ class Team extends React.Component<TeamProps> {
   }
 }
 
+/**
+ * Function to list the cards created
+ */
 function TeamList() {
   return (
     <div>
